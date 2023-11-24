@@ -4,6 +4,5 @@
 
 int main()
 {
-    printf("Hello World!\n");
-    return myfunc(2);
+    printf("%f", sq_exq_roots(0, 0, 0));
 }

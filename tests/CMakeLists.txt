@@ -11,8 +11,6 @@ include(GoogleTest)
 
 set (TESTS
         fibonachi_test.h
-        tst_stdout.h
-        tst_test1.h
         )
 
 include_directories(${PROJECT_NAME} PUBLIC ../app)
@@ -33,14 +31,14 @@ add_executable(${PROJECT_NAME} main.cpp ${TESTS} ${EXT_HEADERS} ${EXT_SOURCES})
 target_link_libraries(${PROJECT_NAME} gtest gtest_main gmock pthread)
 
 # оценка покрытия кода тестами
-target_link_libraries(${PROJECT_NAME} gcov)
+#target_link_libraries(${PROJECT_NAME} gcov)
 
-gtest_add_tests(TARGET      ${PROJECT_NAME}
-        TEST_SUFFIX .noArgs
-        TEST_LIST   noArgsTests
-        )
-gtest_add_tests(TARGET      ${PROJECT_NAME}
-        EXTRA_ARGS  --someArg someValue
-        TEST_SUFFIX .withArgs
-        TEST_LIST   withArgsTests
-        )
+#gtest_add_tests(TARGET      ${PROJECT_NAME}
+#        TEST_SUFFIX .noArgs
+#        TEST_LIST   noArgsTests
+#        )
+#gtest_add_tests(TARGET      ${PROJECT_NAME}
+#        EXTRA_ARGS  --someArg someValue
+#        TEST_SUFFIX .withArgs
+#        TEST_LIST   withArgsTests
+#        )

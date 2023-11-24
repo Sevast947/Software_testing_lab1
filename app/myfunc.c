@@ -1,18 +1,10 @@
-
 #include <stdio.h>
 #include <stdlib.h>
 #include "myfunc.h"
+#include <math.h>
 
-int myfunc(int b) {
-    char *buffer = malloc(sizeof(char) * 1000);
-    buffer [0] = b + 4;
-    // здесь должен ругаться sonarcloud, т.к. утечка памяти
-    return buffer[0];
-}
-
-int val;
-
-int fibonachi(int num) {
+int fibonachi(int num)
+{
     int prev = 1;
     int next = 1;
 
@@ -23,7 +15,8 @@ int fibonachi(int num) {
         return num;
 
     int i = 2;
-    while (i < num) {
+    while (i < num)
+    {
         next += prev;
         prev = next - prev;
         i++;
@@ -32,7 +25,31 @@ int fibonachi(int num) {
     return next;
 }
 
-void printStdoutMessages() {
-    printf("This is a test message from myfunc.c\n");
-    printf("Do not disturb\n");
+double *sq_exq_roots(int a, int b, int c)
+{
+    double discriminant, root1, root2;
+    double *roots = malloc(2 * sizeof(double));
+
+    discriminant = b * b - 4 * a * c;
+
+    if (discriminant > 0)
+    {
+        root1 = (-b + sqrt(discriminant)) / (2 * a);
+        root2 = (-b - sqrt(discriminant)) / (2 * a);
+        roots[0] = root1;
+        roots[1] = root2;
+    }
+    else if (discriminant == 0)
+    {
+        root1 = -b / (2 * a);
+        roots[0] = root1;
+        roots[1] = root1;
+    }
+    else
+    {
+        roots[0] = NAN;
+        roots[1] = NAN;
+    }
+
+    return roots;
 }

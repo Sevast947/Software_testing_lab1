@@ -1,12 +1,8 @@
 #ifndef MYFUNC_H
 #define MYFUNC_H
 
-int myfunc(int b);
+// int fibonachi(int num);
 
-int fibonachi(int num);
-
-void printStdoutMessages();
-
-extern int val;
+double *sq_exq_roots(int a, int b, int c);
 
 #endif // MYFUNC_H

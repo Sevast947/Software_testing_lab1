@@ -4,10 +4,25 @@
 [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=seekerk_ctest&metric=bugs)](https://sonarcloud.io/summary/new_code?id=seekerk_ctest)
 [![Code smells](https://sonarcloud.io/api/project_badges/measure?project=seekerk_ctest&metric=code_smells)](https://sonarcloud.io/dashboard?id=seekerk_ctest)
 
-# Пример работы связки cmake + Google Test (gtest)
+# План тестирования
 
-Для подгрузки gtest необходимо выполнить команды:
-```
-git submodule init
-git submodule update
-```
+# Аттестационное тестирование
+
+# Блочное тестирование (функция sq_exq_roots)
+
+<ol>
+  <li>
+    <h3>Тест Б1.1 (положительный)</h3>
+    <ul>
+      <li>Входные данные: a=0, b=0, c=0</li>
+      <li>Ожидаемый результат:
+        ```
+        1 корень = 0.0
+        2 корень = 0.0
+        ```
+      </li>
+    </ul>
+  </li>
+</ol>
+
+# Интеграционное тестирование:
