@@ -1,3 +1,5 @@
+[![Coverage Status](https://coveralls.io/repos/github/Speredonka/Software_testing_lab1/badge.svg?branch=main)](https://coveralls.io/github/Speredonka/Software_testing_lab1?branch=main)
+
 # План тестирования
 
 # Аттестационное тестирование
